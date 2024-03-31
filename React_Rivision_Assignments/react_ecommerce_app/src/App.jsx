@@ -6,11 +6,11 @@ import PageRoutes from './routes/Page.routes'
 function App() {
 
   return (
-    <>
+    <div className="">
       
       <Navbar />
       <PageRoutes/>
-    </>
+    </div>
   )
 }
 

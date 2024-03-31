@@ -1,28 +1,36 @@
 import axios from "axios";
 import React, { useState, useEffect, useReducer } from "react";
 import { Link } from "react-router-dom";
+import Loading from "./Loading";
 
 const productReducer = (prevState, { type, payload }) => {
   switch (type) {
     case "FETCH_PRODUCTS":
-      return { ...prevState, products: payload };
+      return { ...prevState, products: payload, loading: false };
     case "FILTER_PRODUCTS":
-      return { ...prevState, filterProduct: payload };
+      return { ...prevState, filterProduct: payload, loading: false };
+    case "LOADING":
+      return { ...prevState, loading: true };
     default:
       return state;
   }
 };
 
 const Products = () => {
-  const [state, dispatch] = useReducer(productReducer, { products: [] , filterProduct:[]});
+  const [state, dispatch] = useReducer(productReducer, {
+    products: [],
+    filterProduct: [],
+    loading: false,
+  });
   const { products } = state;
 
   useEffect(() => {
     fetchProducts();
-    console.log("filter",state.filterProduct);
+    console.log("filter", state.filterProduct);
   }, []);
-  
+
   const handleFilter = (e) => {
+    dispatch({ type: "LOADING" });
     const category = e.target.value;
     if (category === "all") {
       dispatch({ type: "FILTER_PRODUCTS", payload: products });
@@ -35,6 +43,7 @@ const Products = () => {
   };
 
   const fetchProducts = async () => {
+    dispatch({ type: "LOADING" });
     try {
       const { data } = await axios({
         url: `https://fakestoreapi.com/products`,
@@ -47,11 +56,13 @@ const Products = () => {
       console.log(error);
     }
   };
-
+  if (state.loading) {
+    return <Loading />;
+  }
   return (
-    <div className="px-6">
-      <div className="w-full h-14 shadow-md mt-2 flex justify-around items-center">
-        <div className="w-1/6">
+    <div className="px-6 text-[90%] lg:text-[16px]">
+      <div className="w-full  px-2 h-14 shadow-md mt-2 flex justify-around items-center">
+        <div className="">
           <label htmlFor="">Category : </label>
           <select
             name="category"
@@ -67,7 +78,8 @@ const Products = () => {
         </div>
         <div className="w-1/6 product_length"></div>
         <span className="text-gray-600">
-          Products : <span className="text-green-500 ">{state.filterProduct.length}</span>
+          Products :{" "}
+          <span className="text-green-500 ">{state.filterProduct.length}</span>
         </span>
       </div>
 
@@ -94,7 +106,7 @@ const Products = () => {
             <hr className="mt-1" />
             <div className="mt-4 flex justify-between space-x-10 ">
               <Link
-                to={`products/${product.id}`}
+                to={`/products/${product.id}`}
                 className="text-white bg-green-500 px-4 py-2 rounded mr-2">
                 View Details
               </Link>
