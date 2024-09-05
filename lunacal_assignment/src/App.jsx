@@ -43,7 +43,7 @@ function App() {
         </ol>
       </div>
       <div className="md:w-[45%] rounded-2xl disFlexColBetween  ">
-        <div className=" rounded-2xl w-full h-[48%] bg-[#363C43] flex p-2 upDown">
+        <div className=" rounded-2xl w-full h-[46%] bg-[#363C43] flex p-2 upDown">
           <div className=" w-[2rem] disFlexColBetween">
             <div className="icon1">
               <img src="/questionIcon.svg" alt="" />
@@ -87,7 +87,8 @@ function App() {
             </main>
           </div>
         </div>
-        <div className="rounded-2xl w-full h-[48%] bg-[#363C43] flex p-2">
+        <div className="line"></div>
+        <div className="rounded-2xl w-full h-[46%] bg-[#363C43] flex p-2">
           <div className=" w-[2rem]  disFlexColBetween">
             <div className="icon1">
               <img src="/questionIcon.svg" alt="" />
@@ -98,7 +99,7 @@ function App() {
             <div className="empty"></div>
           </div>
           <div className="w-[90%] ">
-            <div className="text-white  rounded-3xl flex-row sm:flex gap-4 p-[7px] justify-between items-center ">
+            <div className="text-white  rounded-3xl flex-row sm:flex  p-[7px] justify-between items-center ">
               <div className="galleryShadow bg-[#171717] rounded-2xl py-3 px-8  text-center">
                 Gallery
               </div>
@@ -116,7 +117,7 @@ function App() {
                 </div>
               </div>
             </div>
-            <main className="text-[#969696]  sm:flex   sm:justify-between pl-4 pt-4 pb-4 overflow-x-scroll items-center gap-x-3 text-xl rounded-lg ">
+            <main className="text-[#969696]  sm:flex flex-row  space-y-5 sm:space-y-0   sm:justify-between pl-4 pt-4 pb-4 overflow-x-scroll items-center gap-x-3 text-xl rounded-lg ">
               <div className="imgCont  w-[20rem] flex justify-center items-center">
                 <img src="/img.svg" alt="" />
               </div>
@@ -129,6 +130,7 @@ function App() {
             </main>
           </div>
         </div>
+        <div className="line"></div>
       </div>
     </div>
   );
