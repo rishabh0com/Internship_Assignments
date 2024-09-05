@@ -103,7 +103,7 @@ function App() {
               <div className="galleryShadow bg-[#171717] rounded-2xl py-3 px-8  text-center">
                 Gallery
               </div>
-              <div className="addImgAndBtn flex items-center justify-between mt-5 sm:mt-0 ">
+              <div className="addImgAndBtn flex items-center justify-between gap-x-4 mt-5 sm:mt-0 ">
                 <div className="addImg px-4 py-3 rounded-3xl bg-[#41474E] addImage font-bold">
                   + ADD IMAGE
                 </div>
