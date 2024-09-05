@@ -2,8 +2,8 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="w-full rounded-3xl border-black sm:h-[98vh] space-y-5 sm:space-y-0 m-auto justify-around md:flex sm:p-4">
-      <div className="md:w-[45%] border p-5 border-cyan-600 rounded-2xl  sm:p-4 bg-[#616161] text-lg text-white space-y-5 ">
+    <div className="w-full rounded-3xl border-black space-y-5 lg:space-y-0 m-auto justify-around lg:flex sm:p-4">
+      <div className="lg:w-[45%] border p-5 border-cyan-600 rounded-2xl  sm:p-4 bg-[#616161] text-lg text-white space-y-5 ">
         <p className="font-semibold">
           {" "}
           {
@@ -42,7 +42,7 @@ function App() {
           </li>
         </ol>
       </div>
-      <div className="md:w-[45%] rounded-2xl disFlexColBetween  ">
+      <div className="lg:w-[45%] rounded-2xl disFlexColBetween   ">
         <div className=" rounded-2xl w-full h-[46%] bg-[#363C43] flex p-2 upDown">
           <div className=" w-[2rem] disFlexColBetween">
             <div className="icon1">
@@ -53,8 +53,8 @@ function App() {
             </div>
             <div className="empty"></div>
           </div>
-          <div className=" w-full ">
-            <nav className="text-white bg-[#171717] rounded-3xl flex-row sm:flex p-[7px]  sm:justify-between items-center">
+          <div className=" w-full  ">
+            <nav className="text-white bg-[#171717] rounded-3xl flex-row md:flex p-[7px]   sm:justify-between items-center">
               <div className="bxShadow rounded-2xl py-2 px-8 w-[10rem] m-auto text-center">
                 About Me
               </div>
@@ -65,7 +65,7 @@ function App() {
                 Recommended
               </div>
             </nav>
-            <main className="text-[#969696]   p-4 overflow-y-scroll h-[15rem] space-y-4 text-xl rounded-lg ">
+            <main className="text-[#969696]   p-4 overflow-y-scroll h-[60%] lg:h-[80%] space-y-4 text-xl rounded-lg ">
               <p>
                 Hello! I’m Dave, your sales rep here from Salesforce. I’ve been
                 working at this awesome company for 3 years now.
@@ -87,8 +87,8 @@ function App() {
             </main>
           </div>
         </div>
-        <div className="line"></div>
-        <div className="rounded-2xl w-full h-[46%] bg-[#363C43] flex p-2">
+        <div className="line m-8"></div>
+        <div className="rounded-2xl w-full h-[46%] bg-[#363C43]  flex p-2">
           <div className=" w-[2rem]  disFlexColBetween">
             <div className="icon1">
               <img src="/questionIcon.svg" alt="" />
@@ -98,12 +98,12 @@ function App() {
             </div>
             <div className="empty"></div>
           </div>
-          <div className="w-[90%] ">
-            <div className="text-white  rounded-3xl flex-row sm:flex  p-[7px] justify-between items-center ">
+          <div className="w-[90%]  ">
+            <div className="text-white  rounded-3xl flex-row lg:flex  p-[7px] justify-between items-center ">
               <div className="galleryShadow bg-[#171717] rounded-2xl py-3 px-8  text-center">
                 Gallery
               </div>
-              <div className="addImgAndBtn flex items-center justify-between gap-x-4 mt-5 sm:mt-0 ">
+              <div className="addImgAndBtn flex items-center justify-between gap-x-4 mt-5 lg:mt-0 ">
                 <div className="addImg px-4 py-3 rounded-3xl bg-[#41474E] addImage font-bold">
                   + ADD IMAGE
                 </div>
@@ -117,20 +117,20 @@ function App() {
                 </div>
               </div>
             </div>
-            <main className="text-[#969696]  sm:flex flex-row  space-y-5 sm:space-y-0   sm:justify-between pl-4 pt-4 pb-4 overflow-x-scroll items-center gap-x-3 text-xl rounded-lg ">
-              <div className="imgCont  w-[20rem] flex justify-center items-center">
+            <main className="text-[#969696]  sm:flex flex-row  space-y-6 lg:space-y-0   sm:justify-between pl-4 pt-4 pb-4 items-center gap-x-3 text-xl rounded-lg ">
+              <div className="imgCont   flex justify-center items-center">
                 <img src="/img.svg" alt="" />
               </div>
-              <div className="imgCont w-[20rem] flex justify-center items-center">
+              <div className="imgCont  flex justify-center items-center">
                 <img src="/img.svg" alt="" />
               </div>
-              <div className="imgCont w-[20rem] flex justify-center items-center">
+              <div className="imgCont flex justify-center items-center">
                 <img src="/img.svg" alt="" />
               </div>
             </main>
           </div>
         </div>
-        <div className="line"></div>
+        <div className="line m-8"></div>
       </div>
     </div>
   );

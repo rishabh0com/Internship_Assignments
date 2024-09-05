@@ -19,7 +19,7 @@ body{
     padding: 1rem;
   }
 }
-html{
+#root{
     background: linear-gradient(to bottom, #373E44, #191B1F);
       background-repeat: no-repeat;
 
