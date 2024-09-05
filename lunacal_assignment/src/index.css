@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  padding: 0rem;
+  height: 100vh;
+  background: linear-gradient(to bottom, #373E44, #191B1F);
+}
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    padding: 1rem;
+  }
+}
+html{
+    background: linear-gradient(to bottom, #373E44, #191B1F);
+      background-repeat: no-repeat;
+
+
+}
+
+.upDown{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
